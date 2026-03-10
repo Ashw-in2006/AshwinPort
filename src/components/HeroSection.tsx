@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Bot, Rocket, TerminalSquare, Cloud } from "lucide-react";
+import { Bot, Rocket, TerminalSquare, Cloud, GraduationCap } from "lucide-react";
 import ParticleField from "./ParticleField";
 import profileImg from "@/assets/ashwin-profile.png";
 
@@ -8,6 +8,7 @@ const actions = [
   { icon: Rocket, label: "Explore Projects", href: "#projects", color: "neon-glow-purple" },
   { icon: TerminalSquare, label: "Open Terminal", href: "#terminal", color: "neon-glow-cyan" },
   { icon: Cloud, label: "Cloud Architecture", href: "#dashboard", color: "neon-glow-purple" },
+  { icon: GraduationCap, label: "Academic Journey", href: "#academics", color: "neon-glow-cyan" },
 ];
 
 const HeroSection = () => {
@@ -23,7 +24,6 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center text-center"
         >
-          {/* Tagline */}
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -33,7 +33,6 @@ const HeroSection = () => {
             Welcome to my Cloud DevOps Command Center
           </motion.p>
 
-          {/* Profile Photo */}
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -48,20 +47,18 @@ const HeroSection = () => {
             </div>
           </motion.div>
 
-          {/* Name */}
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-4">
             Hi, I'm <span className="text-gradient-cyan">Ashwin</span>
           </h1>
 
           <p className="font-display text-lg md:text-xl text-muted-foreground mb-2">
-            DevOps Engineer • Cloud Explorer • AI Builder
+            DevOps Engineer • Cloud Explorer • AI Builder • CSE Pre-Final Year
           </p>
           <p className="text-sm text-muted-foreground/70 font-mono mb-10 max-w-lg">
             Interact with my AI to explore my infrastructure
           </p>
 
-          {/* Action Buttons */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 w-full max-w-2xl">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4 w-full max-w-3xl">
             {actions.map((action, i) => (
               <motion.a
                 key={action.label}
@@ -77,14 +74,13 @@ const HeroSection = () => {
             ))}
           </div>
 
-          {/* Cloud Nodes */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
             className="mt-16 flex flex-wrap justify-center gap-3"
           >
-            {["React", "Node.js", "Python", "PostgreSQL", "GitHub Actions", "AWS/Vercel"].map((tech) => (
+            {["React", "Node.js", "Python", "Docker", "AWS", "GitHub Actions", "Kubernetes"].map((tech) => (
               <span
                 key={tech}
                 className="text-xs font-mono text-muted-foreground/60 px-3 py-1 rounded-full border border-border/50"
