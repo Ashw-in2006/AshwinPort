@@ -17,6 +17,7 @@ const socials = [
   { icon: Youtube, label: "YouTube", url: "https://www.youtube.com/@Ashwin-o1g", angle: 0 },
   { icon: Instagram, label: "Instagram", url: "https://www.instagram.com/_chamber_of_creativity_/", angle: 90 },
   { icon: Twitter, label: "X", url: "https://x.com/Ashwin0602", angle: 135 },
+  { icon: ExternalLink, label: "Naukri", url: "https://www.naukri.com/mnjuser/profile?tab=Activity", angle: 45 },
 ];
 
 const metrics = [

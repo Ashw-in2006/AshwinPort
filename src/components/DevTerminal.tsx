@@ -11,11 +11,13 @@ const COMMANDS: Record<string, string> = {
   help: `Available commands:
   whois ashwin     — About Ashwin
   show projects    — List projects
-  list certs       — Certifications
-  show skills      — Technical skills
+  show internships — Internship history
   show academics   — Academic background
   show cgpa        — CGPA details
+  show skills      — Technical skills
   list skills      — Skill matrix
+  list certs       — Certifications
+  analyze neurolens— NeuroLens architecture
   open github      — GitHub profile
   open linkedin    — LinkedIn profile
   contact ashwin   — Contact info
@@ -34,23 +36,30 @@ experience in React, Supabase, REST APIs,
 Docker, Kubernetes, and deployment workflows.
 Passionate about cloud infrastructure and AI.`,
 
-  "show projects": `Projects Found: 8
+  "show projects": `Projects Found: 6
 ├── 🏭 Barani Hydraulics Industrial System
 │   └── Best Industrial Project Award ⭐
 ├── 🧠 NeuroLens – Eye Tracking AI
-│   └── Python, PyTorch, OpenCV
-├── 🛡️ Guardian Vision (Private)
-│   └── Nova ZK24 Innovation Award ⭐
+│   └── Python, TensorFlow, OpenCV
 ├── 📦 Cargo Flow Orchestrator Nexus
 ├── ☁️  INSAT Cloud Visions
 ├── 🎮 Brain Break Buddy
 │   └── Zoho Creator Cliqtrix Competition
-├── ⚙️  DevOps Automation
-│   └── Docker, K8s, Terraform, CI/CD
-└── 🎬 Netflix UI Clone
-    └── React Component Architecture
+└── ⚙️  DevOps Automation
+    └── Docker, K8s, Terraform, CI/CD
 
-Total: 8 projects | 2 live deployments`,
+Total: 6 projects | 2 live deployments`,
+
+  "show internships": `INTERNSHIPS:
+┌──────────┬───────────────────────┬──────────────────┐
+│ Company  │ Role                  │ Period           │
+├──────────┼───────────────────────┼──────────────────┤
+│ Fnext    │ Full Stack Dev Intern │ Jun-Jul 2025     │
+│ Altalya  │ Full Stack Dev Intern │ Jan 2025         │
+│ Octanet  │ Full Stack Dev Intern │ Mar-Apr 2024     │
+└──────────┴───────────────────────┴──────────────────┘
+Stack: React, JavaScript, HTML/CSS
+Total: 3 internships`,
 
   "list certs": `Certifications: 9
 ├── Tata GenAI Data Analytics (Forage)
@@ -116,6 +125,20 @@ Program: B.E. Computer Science Engineering
 Semester: 4th (Pre-Final Year)
 Specialization: Cloud Computing & AI Systems
 Status: ████████░░ 83.6%`,
+
+  "analyze neurolens": `┌─ NeuroLens Architecture ────────────────┐
+│                                          │
+│  [Camera Feed] → [OpenCV Preprocessing]  │
+│        ↓                                 │
+│  [TensorFlow Model] → [Eye Detection]   │
+│        ↓                                 │
+│  [Gaze Tracking Engine]                  │
+│        ↓                                 │
+│  [React Dashboard] ← [FastAPI Backend]   │
+│                                          │
+│  Tech: Python, TensorFlow, OpenCV, React │
+│  Status: Research & Development          │
+└──────────────────────────────────────────┘`,
 
   "open github": `Opening GitHub → github.com/Ashw-in2006
 [REDIRECT]`,
@@ -217,7 +240,7 @@ const DevTerminal = () => {
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
-            {["whois ashwin", "show projects", "list certs", "show skills", "show academics", "show cgpa"].map((cmd) => (
+            {["whois ashwin", "show projects", "show internships", "list certs", "show skills", "show academics"].map((cmd) => (
               <button
                 key={cmd}
                 onClick={() => execute(cmd)}

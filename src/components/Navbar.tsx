@@ -3,13 +3,14 @@ import { Menu, X, Cloud } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { label: "Projects", href: "#projects" },
   { label: "Academics", href: "#academics" },
-  { label: "Dashboard", href: "#dashboard" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
   { label: "Certifications", href: "#certifications" },
   { label: "Community", href: "#community" },
-  { label: "Terminal", href: "#terminal" },
+  { label: "Content", href: "#content" },
   { label: "Contact", href: "#contact" },
+  { label: "Terminal", href: "#terminal" },
 ];
 
 const Navbar = () => {
