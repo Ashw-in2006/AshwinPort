@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Code, Award, Lock } from "lucide-react";
+import { ExternalLink, Code, Award } from "lucide-react";
 
 import imgBarani from "@/assets/project-barani.jpg";
 import imgBrainBreak from "@/assets/project-brainbreak.jpg";
@@ -7,8 +7,6 @@ import imgNeuroLens from "@/assets/project-neurolens.jpg";
 import imgInsat from "@/assets/project-insat.jpg";
 import imgCargo from "@/assets/project-cargo.jpg";
 import imgDevops from "@/assets/project-devops.jpg";
-import imgGuardian from "@/assets/project-guardian.jpg";
-import imgNetflix from "@/assets/project-netflix.jpg";
 
 interface Project {
   title: string;
@@ -18,13 +16,12 @@ interface Project {
   live?: string;
   award?: string;
   image: string;
-  isPrivate?: boolean;
 }
 
 const projects: Project[] = [
   {
     title: "Barani Hydraulics Industrial System",
-    description: "Industrial machine monitoring system for Barani Hydraulics India Pvt Ltd. Received Best Industrial Project Award.",
+    description: "Industrial machine monitoring system for Barani Hydraulics India Pvt Ltd.",
     tech: ["React", "Node.js", "MongoDB", "AWS IoT"],
     github: "https://github.com/Ashw-in2006/BaraniFinal",
     live: "https://barani-final.vercel.app/",
@@ -33,54 +30,39 @@ const projects: Project[] = [
   },
   {
     title: "Brain Break Buddy",
-    description: "Productivity app with AI-powered focus tracking and smart break scheduling. Built for Zoho Creator Cliqtrix competition.",
-    tech: ["TypeScript", "Supabase", "Postman API", "Vercel"],
+    description: "Productivity app from Zoho Creator Cliqtrix competition.",
+    tech: ["Flutter", "Firebase", "OpenAI API"],
     github: "https://github.com/Ashw-in2006/Brain-BreakBuddy",
     live: "https://brain-break-buddy-mozy.vercel.app/",
     image: imgBrainBreak,
   },
   {
     title: "NeuroLens – Eye Tracking AI",
-    description: "AI-powered eye tracking system for accessibility and user behavior analysis using Python, MediaPipe, and OpenCV.",
-    tech: ["Python", "PyTorch", "OpenCV", "MediaPipe"],
+    description: "AI-powered eye tracking system for accessibility and behavior analysis.",
+    tech: ["Python", "TensorFlow", "OpenCV", "React"],
     github: "https://github.com/Ashw-in2006/NeuroLens",
     image: imgNeuroLens,
   },
   {
-    title: "Guardian Vision",
-    description: "AI-powered security system for anomaly detection in restricted zones.",
-    tech: ["Python", "PyTorch", "OpenCV", "FastAPI"],
-    award: "Nova ZK24 Innovation Award",
-    isPrivate: true,
-    image: imgGuardian,
-  },
-  {
     title: "INSAT Cloud Visions",
-    description: "Satellite image processing platform using AI for cloud pattern recognition and weather prediction.",
+    description: "Satellite image processing with AI for cloud pattern recognition.",
     tech: ["Python", "TensorFlow", "FastAPI", "React"],
     github: "https://github.com/Ashw-in2006/insat-cloud-visions",
     image: imgInsat,
   },
   {
     title: "Cargo Flow Orchestrator Nexus",
-    description: "Supply chain optimization engine with real-time tracking, route optimization, and inventory prediction.",
+    description: "Supply chain optimization with real-time tracking and route optimization.",
     tech: ["Java", "Spring Boot", "Kafka", "MongoDB"],
     github: "https://github.com/Ashw-in2006/cargo-flow-orchestrator-nexus",
     image: imgCargo,
   },
   {
     title: "DevOps Automation",
-    description: "Comprehensive DevOps automation toolkit with CI/CD pipelines and infrastructure as code.",
+    description: "DevOps automation toolkit with CI/CD pipelines and infrastructure as code.",
     tech: ["Docker", "Kubernetes", "Terraform", "GitHub Actions"],
     github: "https://github.com/Ashw-in2006/DevOps",
     image: imgDevops,
-  },
-  {
-    title: "Netflix UI Clone",
-    description: "Responsive Netflix front-end clone with component-based architecture.",
-    tech: ["HTML5", "CSS3", "JavaScript", "React"],
-    github: "https://github.com/Ashw-in2006/Netflix-Clone",
-    image: imgNetflix,
   },
 ];
 
@@ -93,7 +75,7 @@ const ProjectsSection = () => (
         </h2>
         <p className="text-muted-foreground mb-10 text-sm">Explore repositories, live demos, and architecture</p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((p, i) => (
             <motion.div
               key={p.title}
@@ -103,7 +85,6 @@ const ProjectsSection = () => (
               transition={{ delay: i * 0.06 }}
               className="glass rounded-xl overflow-hidden flex flex-col hover:border-primary/30 transition-colors group"
             >
-              {/* Project Image */}
               <div className="relative h-36 overflow-hidden">
                 <img
                   src={p.image}
@@ -117,14 +98,8 @@ const ProjectsSection = () => (
                     <Award className="w-3 h-3" /> {p.award}
                   </span>
                 )}
-                {p.isPrivate && (
-                  <span className="absolute top-2 left-2 flex items-center gap-1 text-[10px] text-muted-foreground font-mono bg-background/80 backdrop-blur-sm px-2 py-1 rounded-full">
-                    <Lock className="w-3 h-3" /> Private
-                  </span>
-                )}
               </div>
 
-              {/* Content */}
               <div className="p-4 flex flex-col flex-1">
                 <h3 className="font-display font-semibold text-sm text-foreground group-hover:text-primary transition-colors mb-2">
                   {p.title}
@@ -150,12 +125,6 @@ const ProjectsSection = () => (
                     <a href={p.github} target="_blank" rel="noopener noreferrer"
                       className="btn-neon rounded-md px-2.5 py-1 text-[11px] flex items-center gap-1">
                       <Code className="w-3 h-3" /> Code
-                    </a>
-                  )}
-                  {p.isPrivate && (
-                    <a href="mailto:rajaashwin2006@gmail.com?subject=Request%20Access%20-%20Guardian%20Vision"
-                      className="btn-neon rounded-md px-2.5 py-1 text-[11px] flex items-center gap-1">
-                      <Lock className="w-3 h-3" /> Request
                     </a>
                   )}
                 </div>

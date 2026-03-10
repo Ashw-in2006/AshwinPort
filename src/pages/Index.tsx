@@ -1,26 +1,32 @@
 import Navbar from "@/components/Navbar";
 import InfinityBackground from "@/components/InfinityBackground";
 import HeroSection from "@/components/HeroSection";
-import ProjectsSection from "@/components/ProjectsSection";
 import AcademicSection from "@/components/AcademicSection";
-import DashboardSection from "@/components/DashboardSection";
-import DevTerminal from "@/components/DevTerminal";
+import ExperienceSection from "@/components/ExperienceSection";
+import ProjectsSection from "@/components/ProjectsSection";
 import CertificationsSection from "@/components/CertificationsSection";
 import CommunitySection from "@/components/CommunitySection";
+import ContentCreationSection from "@/components/ContentCreationSection";
 import ContactSection from "@/components/ContactSection";
+import DashboardSection from "@/components/DashboardSection";
+import DevTerminal from "@/components/DevTerminal";
+import ResumeViewer from "@/components/ResumeViewer";
 
 const Index = () => (
   <div className="min-h-screen bg-background relative">
     <InfinityBackground />
     <Navbar />
     <HeroSection />
-    <ProjectsSection />
     <AcademicSection />
+    <ExperienceSection />
+    <ProjectsSection />
     <DashboardSection />
-    <DevTerminal />
     <CertificationsSection />
     <CommunitySection />
+    <ContentCreationSection />
     <ContactSection />
+    <DevTerminal />
+    <ResumeViewer />
     <footer className="py-8 text-center text-xs text-muted-foreground font-mono border-t border-border">
       <p>© 2026 Ashwin R — Cloud DevOps Command Center</p>
     </footer>
