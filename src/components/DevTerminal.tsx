@@ -13,6 +13,9 @@ const COMMANDS: Record<string, string> = {
   show projects    — List projects
   list certs       — Certifications
   show skills      — Technical skills
+  show academics   — Academic background
+  show cgpa        — CGPA details
+  list skills      — Skill matrix
   open github      — GitHub profile
   open linkedin    — LinkedIn profile
   contact ashwin   — Contact info
@@ -24,43 +27,95 @@ const COMMANDS: Record<string, string> = {
 │  Location: Tiruppur, Tamil Nadu     │
 │  Education: B.E CSE (CGPA: 8.36)   │
 │  Jai Shriram Engineering College    │
+│  Pre-Final Year (2023–2027)         │
 └─────────────────────────────────────┘
-Aspiring software developer with hands-on 
-experience in React, Supabase, REST APIs, 
-and deployment workflows.`,
+Aspiring software developer with hands-on
+experience in React, Supabase, REST APIs,
+Docker, Kubernetes, and deployment workflows.
+Passionate about cloud infrastructure and AI.`,
 
-  "show projects": `Projects Found:
+  "show projects": `Projects Found: 8
 ├── 🏭 Barani Hydraulics Industrial System
-│   └── Best Industrial Project Award
-├── 🧠 NeuroLens – Eye Tracking System
-│   └── Python, MediaPipe, OpenCV
+│   └── Best Industrial Project Award ⭐
+├── 🧠 NeuroLens – Eye Tracking AI
+│   └── Python, PyTorch, OpenCV
+├── 🛡️ Guardian Vision (Private)
+│   └── Nova ZK24 Innovation Award ⭐
 ├── 📦 Cargo Flow Orchestrator Nexus
 ├── ☁️  INSAT Cloud Visions
-└── 🎮 Brain Break Buddy
-    └── Zoho Creator Cliqtrix Competition
+├── 🎮 Brain Break Buddy
+│   └── Zoho Creator Cliqtrix Competition
+├── ⚙️  DevOps Automation
+│   └── Docker, K8s, Terraform, CI/CD
+└── 🎬 Netflix UI Clone
+    └── React Component Architecture
 
-Total: 5 projects | 2 live deployments`,
+Total: 8 projects | 2 live deployments`,
 
-  "list certs": `Certifications: 8+
-├── AWS Cloud Practitioner Essentials
-├── NPTEL Cloud Computing (IIT Kharagpur) – Elite
+  "list certs": `Certifications: 9
+├── Tata GenAI Data Analytics (Forage)
+├── Cybersecurity Analyst Simulation (Forage)
+├── AWS Cloud Practitioner Essentials ⏳
+├── NPTEL Cloud Computing (IIT Kharagpur) ⏳
+├── HP Data Science & Analytics
 ├── Infosys Springboard – Java
-├── Tata GenAI Data Analytics Simulation
-├── Cybersecurity Analyst Simulation
-├── Google Developer Groups – Gen AI Jams
-├── Build with India Hackathon (Top 5k)
-└── ISRO Bharatiya Antariksh Hackathon`,
+├── Unstop Certificate
+├── Unstop Leadership Certificate
+└── Unstop Event Certificate
+
+✅ Completed: 7 | ⏳ In Progress: 2`,
 
   "show skills": `Skills Matrix:
-┌──────────────┬──────────────────────────┐
-│ Frontend     │ React, HTML, CSS, JS     │
-│ Backend      │ Java, Python, Node.js    │
-│ Database     │ PostgreSQL, MySQL, Mongo │
-│ DevOps       │ Git, GitHub, CI/CD       │
-│ Cloud        │ AWS, Vercel, REST APIs   │
-│ Testing      │ SDLC, STLC, Manual QA   │
-│ Tools        │ VS Code, IntelliJ, Canva │
-└──────────────┴──────────────────────────┘`,
+┌──────────────┬────────────────────────────┐
+│ Languages    │ C, Java, Python, JS        │
+│ Frontend     │ React, Flutter, Next.js    │
+│ Backend      │ Node.js, FastAPI, Spring   │
+│ Database     │ PostgreSQL, MongoDB, MySQL │
+│ DevOps       │ Docker, K8s, Terraform     │
+│ Cloud        │ AWS, Vercel, CI/CD         │
+│ AI/ML        │ PyTorch, TensorFlow, LLMs  │
+│ Tools        │ Git, VS Code, IntelliJ     │
+│ Special      │ Prompt Engineering, SysArch│
+└──────────────┴────────────────────────────┘`,
+
+  "list skills": `Skills Matrix:
+┌──────────────┬────────────────────────────┐
+│ Languages    │ C, Java, Python, JS        │
+│ Frontend     │ React, Flutter, Next.js    │
+│ Backend      │ Node.js, FastAPI, Spring   │
+│ Database     │ PostgreSQL, MongoDB, MySQL │
+│ DevOps       │ Docker, K8s, Terraform     │
+│ Cloud        │ AWS, Vercel, CI/CD         │
+│ AI/ML        │ PyTorch, TensorFlow, LLMs  │
+│ Tools        │ Git, VS Code, IntelliJ     │
+│ Special      │ Prompt Engineering, SysArch│
+└──────────────┴────────────────────────────┘`,
+
+  "show academics": `┌─────────────────────────────────────────┐
+│  ACADEMIC RECORD                        │
+├─────────────────────────────────────────┤
+│  🎓 B.E. Computer Science Engineering  │
+│     Jai Shriram Engineering College     │
+│     (Autonomous) – Anna University      │
+│     2023 – 2027                         │
+│     CGPA: 8.36 (Till 4th Semester)      │
+│     Focus: Cloud Computing & AI         │
+├─────────────────────────────────────────┤
+│  📚 HSC (2023) — 75%                   │
+│     Nyurthi Vidhya Bhavan MHSS          │
+│     Major: Computer Science             │
+├─────────────────────────────────────────┤
+│  📖 SSLC (2021) — 89%                  │
+│     Nyurthi Vidhya Bhavan MHSS          │
+│     Top Performer: Math & Science       │
+└─────────────────────────────────────────┘`,
+
+  "show cgpa": `Current CGPA: 8.36 / 10.0
+Institution: Jai Shriram Engineering College
+Program: B.E. Computer Science Engineering
+Semester: 4th (Pre-Final Year)
+Specialization: Cloud Computing & AI Systems
+Status: ████████░░ 83.6%`,
 
   "open github": `Opening GitHub → github.com/Ashw-in2006
 [REDIRECT]`,
@@ -73,12 +128,14 @@ Total: 5 projects | 2 live deployments`,
 📞 +91 93856 15227
 🔗 github.com/Ashw-in2006
 🔗 linkedin.com/in/ashwin-r-842aa9289
-🐦 x.com/Ashwin0602`,
+🐦 x.com/Ashwin0602
+📸 instagram.com/_chamber_of_creativity_
+🎥 youtube.com/@Ashwin-o1g`,
 };
 
 const DevTerminal = () => {
   const [lines, setLines] = useState<Line[]>([
-    { type: "output", text: "ASHWIN DevOps Terminal v1.0.0" },
+    { type: "output", text: "ASHWIN DevOps Terminal v2.0.0" },
     { type: "output", text: 'Type "help" for available commands.\n' },
   ]);
   const [input, setInput] = useState("");
@@ -130,7 +187,6 @@ const DevTerminal = () => {
           </div>
 
           <div className="glass rounded-xl overflow-hidden neon-glow-cyan">
-            {/* Title bar */}
             <div className="flex items-center gap-2 px-4 py-2 border-b border-border bg-secondary/30">
               <div className="w-3 h-3 rounded-full bg-destructive/80" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
@@ -138,7 +194,6 @@ const DevTerminal = () => {
               <span className="text-xs font-mono text-muted-foreground ml-2">ashwin@cloud-cmd ~ </span>
             </div>
 
-            {/* Terminal body */}
             <div className="p-4 h-80 overflow-y-auto font-mono text-sm">
               {lines.map((line, i) => (
                 <div key={i} className={`whitespace-pre-wrap mb-1 ${line.type === "input" ? "text-neon-green" : "text-foreground/80"}`}>
@@ -162,7 +217,7 @@ const DevTerminal = () => {
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
-            {["whois ashwin", "show projects", "list certs", "show skills"].map((cmd) => (
+            {["whois ashwin", "show projects", "list certs", "show skills", "show academics", "show cgpa"].map((cmd) => (
               <button
                 key={cmd}
                 onClick={() => execute(cmd)}
