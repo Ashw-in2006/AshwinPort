@@ -7,6 +7,7 @@ import imgNeuroLens from "@/assets/project-neurolens.jpg";
 import imgInsat from "@/assets/project-insat.jpg";
 import imgCargo from "@/assets/project-cargo.jpg";
 import imgDevops from "@/assets/project-devops.jpg";
+import imgOrbitops from "@/assets/project-orbitops.jpg";
 
 interface Project {
   title: string;
@@ -63,6 +64,13 @@ const projects: Project[] = [
     tech: ["Docker", "Kubernetes", "Terraform", "GitHub Actions"],
     github: "https://github.com/Ashw-in2006/DevOps",
     image: imgDevops,
+  },
+  {
+    title: "OrbitOps — Cloud Operations Platform",
+    description: "Interactive Cloud Engineer Command Center & Developer Operating System portfolio.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    live: "https://id-preview--3818d7c9-76ba-44c0-a1a1-7a26f16481a8.lovable.app",
+    image: imgOrbitops,
   },
 ];
 
