@@ -7,6 +7,7 @@ import imgNeuroLens from "@/assets/project-neurolens.jpg";
 import imgInsat from "@/assets/project-insat.jpg";
 import imgCargo from "@/assets/project-cargo.jpg";
 import imgDevops from "@/assets/project-devops.jpg";
+import imgOrbitops from "@/assets/project-orbitops.jpg";
 
 interface Project {
   title: string;
