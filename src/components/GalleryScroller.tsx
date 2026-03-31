@@ -45,17 +45,28 @@ const GalleryScroller = () => (
         animate={{ x: ["0%", "-50%"] }}
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       >
-        {doubled.map((src, i) => (
+        {doubled.map((item, i) => (
           <div
             key={i}
             className="shrink-0 w-72 h-48 rounded-xl overflow-hidden border border-border/50 glass"
           >
-            <img
-              src={src}
-              alt={`Gallery ${(i % images.length) + 1}`}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
+            {item.type === "video" ? (
+              <video
+                src={item.src}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <img
+                src={item.src}
+                alt={`Gallery ${(i % items.length) + 1}`}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            )}
           </div>
         ))}
       </motion.div>
