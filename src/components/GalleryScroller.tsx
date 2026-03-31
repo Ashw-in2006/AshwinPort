@@ -11,9 +11,24 @@ import g7 from "@/assets/gallery-7.webp";
 import g8 from "@/assets/gallery-8.avif";
 import g9 from "@/assets/gallery-9.avif";
 import g10 from "@/assets/gallery-10.avif";
+import galleryVideo from "@/assets/gallery-video.mp4";
 
-const images = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10];
-const doubled = [...images, ...images];
+type GalleryItem = { type: "image"; src: string } | { type: "video"; src: string };
+
+const items: GalleryItem[] = [
+  { type: "image", src: g1 },
+  { type: "image", src: g2 },
+  { type: "image", src: g3 },
+  { type: "image", src: g4 },
+  { type: "image", src: g5 },
+  { type: "video", src: galleryVideo },
+  { type: "image", src: g6 },
+  { type: "image", src: g7 },
+  { type: "image", src: g8 },
+  { type: "image", src: g9 },
+  { type: "image", src: g10 },
+];
+const doubled = [...items, ...items];
 
 const GalleryScroller = () => (
   <section className="py-12 overflow-hidden">
