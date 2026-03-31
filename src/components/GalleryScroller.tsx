@@ -13,6 +13,11 @@ import g8 from "@/assets/gallery-8.avif";
 import g9 from "@/assets/gallery-9.avif";
 import g10 from "@/assets/gallery-10.avif";
 import galleryVideo from "@/assets/gallery-video.mp4";
+import g11 from "@/assets/gallery-11.jpg";
+import g12 from "@/assets/gallery-12.jpg";
+import g13 from "@/assets/gallery-13.jpg";
+import g14 from "@/assets/gallery-14.jpg";
+import g15 from "@/assets/gallery-15.jpg";
 
 type GalleryItem = { type: "image"; src: string } | { type: "video"; src: string };
 
@@ -25,9 +30,14 @@ const items: GalleryItem[] = [
   { type: "video", src: galleryVideo },
   { type: "image", src: g6 },
   { type: "image", src: g7 },
+  { type: "image", src: g11 },
+  { type: "image", src: g12 },
   { type: "image", src: g8 },
+  { type: "image", src: g13 },
   { type: "image", src: g9 },
+  { type: "image", src: g14 },
   { type: "image", src: g10 },
+  { type: "image", src: g15 },
 ];
 const doubled = [...items, ...items];
 
